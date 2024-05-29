@@ -6,7 +6,7 @@ function keyLong(event){
     //  console.log(event)
     if(event.keyCode >= "65" && event.keyCode <=  "90"){
         console.log("upper")
-        var length = document.getElementById('a')
+        var length = document.getElementById('a') 
         for(i = 0 ; i < length.value.length ; i++){
 
             count++
