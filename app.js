@@ -20,3 +20,17 @@
 // ========================
 // ========================
 
+  var username = document.getElementById('userName')
+  var email = document.getElementById('email')
+  var password = document.getElementById('password')
+
+  function submit(event){
+    console.log(username.value , password.value ,email.value)
+    localStorage.setItem("data",username.value)
+    localStorage.setItem("data1",password.value)
+    localStorage.setItem("data2",email.value)
+    getItems()
+  }
+  function getItems(event){
+    console.log(localStorage.getItem('data'))
+  }
