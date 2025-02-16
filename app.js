@@ -25,12 +25,25 @@
   var password = document.getElementById('password')
 
   function submit(event){
-    console.log(username.value , password.value ,email.value)
-    localStorage.setItem("data",username.value)
-    localStorage.setItem("data1",password.value)
-    localStorage.setItem("data2",email.value)
-    getItems()
+    var user = {
+      name: username.value,
+      email: email.value,
+      password: password.value
+
+    }
+    console.log(user)
+    saveItems()
+    function saveItems(event){
+      localStorage.setItem("data",JSON.stringify(user))
+      // console.log(username.value , password.value ,email.value)
+      // localStorage.setItem("data",username.value)
+      // localStorage.setItem("data1",password.value)
+      // localStorage.setItem("data2",email.value)
+      getItems()
+    }
   }
   function getItems(event){
-    console.log(localStorage.getItem('data'))
+    JSON.parse(localStorage.getItem("data"))
+    // console.log(localStorage.getItem('data'))
+    console.log("test")
   }
